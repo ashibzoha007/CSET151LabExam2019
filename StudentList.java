@@ -5,7 +5,7 @@ public class StudentList {
 public static void main(String[] args) {
 
 //		Check arguments
-		if(args[0].equals("a")) {
+		if(args[0].equals("list")) {
 			System.out.println("Loading data ...");
 			try {
 			BufferedReader s = new BufferedReader(
