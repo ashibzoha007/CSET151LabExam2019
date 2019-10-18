@@ -78,15 +78,19 @@ public static void main(String[] args) {
 							   new FileInputStream("students.txt")));
 			String D = s.readLine();
 			char a[] = D.toCharArray();
-			boolean in_word = false;
-			int count=0;
-			for(char c:a) {
-				if(c ==' ')
-				{
-					if (!in_word) {	count++; in_word =false;	}
-					else { in_word=false;}
-				}
-			}
+			boolean runWithRetries(int maxRetries, ThrowingTask t) { 
+   			int count = 0;
+    		while (count < maxRetries) {
+        try {
+            t.run();
+            return true;
+        }
+        catch (ExecutionException e) {
+            if (++count >= maxRetries)
+                return false;
+        }
+    }
+}
 			System.out.println(count +" word(s) found " + a.length);
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
