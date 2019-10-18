@@ -63,7 +63,7 @@ public static void main(String[] args) {
 			for(int idx = 0; idx<i.length && !done; idx++) {
 				if(i[idx].equals(t)) {
 					System.out.println("We found it!");
-						done=true;
+						done=false;
 				}
 			}
 			} catch (Exception e){}
@@ -83,7 +83,7 @@ public static void main(String[] args) {
 			for(char c:a) {
 				if(c ==' ')
 				{
-					if (!in_word) {	count++; in_word =true;	}
+					if (!in_word) {	count++; in_word =false;	}
 					else { in_word=false;}
 				}
 			}
