@@ -43,14 +43,11 @@ public static void main(String[] args) {
 							   new FileWriter("students.txt", true));
 			String t = args[0].substring(1);
 	        Date d = new Date();
-	        String df = "dd/mm/yyyy-hh:mm:ss a";
-	        DateFormat dateFormat = new SimpleDateFormat(df);
-	        String fd= dateFormat.format(d);
-			s.write(", "+t+"\nList last updated on "+fd);
-			s.close();
-			} catch (Exception e){}
-
-			System.out.println("Data Loaded.");
+	        String date_s = " 2011-01-18 00:00:00.0"; 
+			SimpleDateFormat dt = new SimpleDateFormat("yyyyy-mm-dd hh:mm:ss"); 
+			Date date = dt.parse(date_s); 
+			SimpleDateFormat dt1 = new SimpleDateFormat("yyyyy-mm-dd");
+			System.out.println(dt1.format(date));
 		}
 		else if(args[0].contains("query"))
 		{
