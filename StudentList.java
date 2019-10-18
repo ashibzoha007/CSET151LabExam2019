@@ -107,3 +107,26 @@ public static void main(String[] args) {
 	}
 
 }
+
+
+public class Constants {
+public static void main(String[] args) {
+
+
+private static final String FINAL_STRING = "foo";
+
+public void stringPrinter(){
+    for(int i=0;i<10;i++){
+        System.out.println(FINAL_STRING);
+    }
+}
+
+}
+
+
+
+}
+
+
+
+
