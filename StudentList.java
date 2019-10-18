@@ -5,7 +5,7 @@ public class StudentList {
 public static void main(String[] args) {
 
 //		Check arguments
-		if(args[0].equals("a")) {
+		if(args[0].equals("all")) {
 			System.out.println("Loading data ...");
 			try {
 			BufferedReader s = new BufferedReader(
@@ -20,7 +20,7 @@ public static void main(String[] args) {
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].equals("r"))
+		else if(args[0].equals("random"))
 		{
 			System.out.println("Loading data ...");
 			try {
@@ -36,7 +36,7 @@ public static void main(String[] args) {
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].contains("+")){
+		else if(args[0].contains("another_list")){
 			System.out.println("Loading data ...");
 			try {
 			BufferedWriter s = new BufferedWriter(
@@ -52,7 +52,7 @@ public static void main(String[] args) {
 
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].contains("?"))
+		else if(args[0].contains("query"))
 		{
 			System.out.println("Loading data ...");
 			try {
@@ -72,7 +72,7 @@ public static void main(String[] args) {
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].contains("c"))
+		else if(args[0].contains("swap_another"))
 		{
 			System.out.println("Loading data ...");
 			try {
@@ -94,5 +94,16 @@ public static void main(String[] args) {
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
 		}
+
+
+		private static void displayStudent(List<Student>studentsList) {
+			for (Student temp : studentsList){
+				System.out.println(temp);
+			}
+			
+		}
+
+
 	}
+
 }
