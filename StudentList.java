@@ -5,8 +5,8 @@ public class StudentList {
 public static void main(String[] args) {
 
 //		Check arguments
-		if(args[0].equals("all")) {
-			System.out.println("Loading data ...");
+		if(args[0].equals("all")) {						//show all data
+			System.out.println("Loading data ...");   
 			try {
 			BufferedReader s = new BufferedReader(
 							   new InputStreamReader(
@@ -20,7 +20,7 @@ public static void main(String[] args) {
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].equals("random"))
+		else if(args[0].equals("random"))			//show random data
 		{
 			System.out.println("Loading data ...");
 			try {
@@ -36,7 +36,7 @@ public static void main(String[] args) {
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].contains("another_list")){
+		else if(args[0].contains("another_list")){  		//show another list
 			System.out.println("Loading data ...");
 			try {
 			BufferedWriter s = new BufferedWriter(
@@ -49,7 +49,7 @@ public static void main(String[] args) {
 			SimpleDateFormat dt1 = new SimpleDateFormat("yyyyy-mm-dd");
 			System.out.println(dt1.format(date));
 		}
-		else if(args[0].contains("query"))
+		else if(args[0].contains("query")) 						//for help
 		{
 			System.out.println("Loading data ...");
 			try {
@@ -69,7 +69,7 @@ public static void main(String[] args) {
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
 		}
-		else if(args[0].contains("swap_another"))
+		else if(args[0].contains("swap_another")) 					//show swap list
 		{
 			System.out.println("Loading data ...");
 			try {
